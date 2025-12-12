@@ -35,3 +35,10 @@ coverage/
 
 # Blob storage files
 /blob-report/
+
+# Generic Reports (catch-all)
+reports/
+report/
+*.html
+*.xml
+*.json
