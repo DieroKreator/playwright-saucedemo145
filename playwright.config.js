@@ -1,7 +1,7 @@
-module.exports = {      
+module.exports = {
     use: {
         browserName: 'firefox',
-        headless: false,
+        headless: true,
         // screenshot: 'only-on-failure',
         // video: 'retain-on-failure',
     },
