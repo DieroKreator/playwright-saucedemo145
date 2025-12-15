@@ -6,7 +6,7 @@ module.exports = defineConfig({
         browserName: 'firefox',
         headless: true,
         launchOptions: {
-            slowMo: 1000 // wait between every action
+            slowMo: 0 // wait between every action
         },
         // screenshot: 'only-on-failure',
         // video: 'retain-on-failure',
