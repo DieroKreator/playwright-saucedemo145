@@ -2,10 +2,7 @@ const { test, expect } = require('@playwright/test')
 
 test('Fluxo de compra da mochila', async ({ page }) => {
 
-    const tituloSecao = page.locator('span.title')
-    const tituloSecao2 = page.locator('#back-to-products')
-    const tituloSecao3 = page.locator('span.title')
-    const tituloSecao4 = page.locator('span.title')
+    let tituloSecao = page.locator('span.title')
     const tituloProduto = page.locator('div.inventory_details_name.large_size')
     const tituloProdutoCarrinho = page.locator('div.inventory_item_name')
     const precoProduto = page.locator('.inventory_details_price')
@@ -17,10 +14,10 @@ test('Fluxo de compra da mochila', async ({ page }) => {
     const btnContinue = page.getByRole('button', { name: 'Continue' })
     const btnFinish = page.getByRole('button', { name: 'Finish' })
     const successMessageTxt = page.locator('h2.complete-header')
-    let expectedProductText = 'Sauce Labs Backpack'
-    let expectedProductPrice = '$29.99'
-    let expectedBadgeNumber = '1'
-    let expectedSuccessMessage = 'Thank you for your order!'
+    const expectedProductText = 'Sauce Labs Backpack'
+    const expectedProductPrice = '$29.99'
+    const expectedBadgeNumber = '1'
+    const expectedSuccessMessage = 'Thank you for your order!'
 
     await page.goto('https://www.saucedemo.com/')
     await page.fill('#user-name', 'standard_user')
@@ -35,9 +32,9 @@ test('Fluxo de compra da mochila', async ({ page }) => {
 
     /* Inventory Item Page */
     await expect(page).toHaveURL(/.*inventory-item/)
-    // const tituloSecao2 = page.locator('#back-to-products')
-    await expect(tituloSecao2).toBeVisible()
-    await expect(tituloSecao2).toHaveText('Back to products')
+    tituloSecao = page.locator('#back-to-products')
+    await expect(tituloSecao).toBeVisible()
+    await expect(tituloSecao).toHaveText('Back to products')
 
     // const tituloProduto = page.locator('div.inventory_details_name.large_size')
     await expect(tituloProduto).toHaveText(expectedProductText)
@@ -52,8 +49,8 @@ test('Fluxo de compra da mochila', async ({ page }) => {
 
     /* Shopping Cart Page */
     await expect(page).toHaveURL(/.*cart/)
-    // const tituloSecao3 = page.locator('span.title')
-    await expect(tituloSecao3).toHaveText('Your Cart')
+    tituloSecao = page.locator('span.title')
+    await expect(tituloSecao).toHaveText('Your Cart')
     await expect(tituloProdutoCarrinho).toHaveText(expectedProductText)
     await expect(page.locator('.inventory_item_price')).toHaveText(expectedProductPrice)
     await expect(badgeQuantity).toHaveText(expectedBadgeNumber)
@@ -61,7 +58,8 @@ test('Fluxo de compra da mochila', async ({ page }) => {
 
     /* CheckoutStep1 Page */
     await expect(page).toHaveURL(/.*checkout-step-one/)
-    await expect(tituloSecao4).toHaveText('Checkout: Your Information')
+    tituloSecao = page.locator('span.title')
+    await expect(tituloSecao).toHaveText('Checkout: Your Information')
     await txtFieldFirstName.fill('Peter')
     await txtFieldLastName.fill('Laudrick')
     await txtFieldPostalCode.fill('00000')
@@ -69,7 +67,7 @@ test('Fluxo de compra da mochila', async ({ page }) => {
 
     /* CheckoutStep2 Page */
     await expect(page).toHaveURL(/.*checkout-step-two/)
-    await expect(tituloSecao4).toHaveText('Checkout: Overview')
+    await expect(tituloSecao).toHaveText('Checkout: Overview')
     await expect(tituloProdutoCarrinho).toHaveText(expectedProductText)
     await expect(page.locator('.inventory_item_price')).toHaveText(expectedProductPrice)
     await expect(badgeQuantity).toHaveText(expectedBadgeNumber)
@@ -77,7 +75,7 @@ test('Fluxo de compra da mochila', async ({ page }) => {
 
     /* CheckoutComplete Page */
     await expect(page).toHaveURL(/.*checkout-complete/)
-    await expect(tituloSecao4).toHaveText('Checkout: Complete!')
+    await expect(tituloSecao).toHaveText('Checkout: Complete!')
     await expect(successMessageTxt).toHaveText(expectedSuccessMessage)
 }
 );
