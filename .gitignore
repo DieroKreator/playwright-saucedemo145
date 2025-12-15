@@ -42,3 +42,9 @@ report/
 *.html
 *.xml
 *.json
+
+# Ignore any HTML inside report folders
+report/**/*.html
+reports/**/*.html
+playwright-report/**/*.html
+blob-report/**/*.html
