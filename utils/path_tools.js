@@ -8,9 +8,7 @@ const fs = require('fs') // File System / biblioteca do Sistema Operacional
 const path = require('path') // biblioteca de caminhos de pastas/arquivos
 
 // Formatar números com zero na frente, se precisar
-function pad2(num) {
-    return String(num).padStart(2, '0')
-}
+function pad2(num) { return String(num).padStart(2, '0') }
 
 // Função para definir data e hora baseado no momento da execução
 function compute_run_folder(baseDir) {
