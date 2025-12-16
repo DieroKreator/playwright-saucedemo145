@@ -9,7 +9,7 @@ test.describe('SauceDemo - fluxo principal de compra', () => {
             await test.step('Acessar SauceDemo.com', async () => {
                 await page.goto('/')
                 await expect(page).toHaveURL('/')
-                await expect(page.locator('[data-test="username"]')).toHaveText('Login')
+                await expect(page.locator('[data-test="login-button"]')).toHaveText('Login')
             })
 
             await test.step('Login com Sucesso', async () => {
