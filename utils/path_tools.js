@@ -23,7 +23,7 @@ function compute_run_folder(baseDir) {
     // Verifica data e hora
     const now = new Date()  // perguntar para o computador que dia e horas são
     const yyyy = now.getFullYear()      // Ano com 4 dígitos
-    const MM = pad2(now.getMonth())     // Mês com 2 digitos
+    const MM = pad2(now.getMonth() + 1)     // Mês com 2 digitos
     const dd = pad2(now.getDate())      // Dia com 2 digitos
     const HH = pad2(now.getHours())     // Hora com 2 digitos
     const mm = pad2(now.getMinutes())   // Minutos com 2 digitos
