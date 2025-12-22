@@ -14,7 +14,7 @@ process.env.SCREENSHOTS_DIR = screenshotsDir
 
 module.exports = defineConfig({
     testDir: './tests',   // nossos testes estão na pasta tests
-    timeout: 30000,      // 30_000 = 30 segundos
+    timeout: 30 * 1000,      // 30_000 = 30 segundos
     retries: 1,
     fullyParallel: true, // execução em paralelo / multi thread
     outputDir: resultsDir,

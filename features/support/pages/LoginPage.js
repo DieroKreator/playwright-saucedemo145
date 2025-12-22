@@ -1,10 +1,10 @@
 export default class LoginPage {
     constructor(page) {
         this.page = page;
-        this.url = 'https://wwww.saucedemo.com'
-        this.username = '#username'
+        this.username = '#user-name'
         this.password = '#password'
-        this.loginButton = '#login-button'
+        this.loginButton = '[data-test="login-button"]'
+        this.url = 'https://www.saucedemo.com'
     }
 
     async login(username, password) {
