@@ -1,4 +1,4 @@
-// import { Given, When, Then } from '@cucumber/cucumber'
+import { Given, When, Then } from '@cucumber/cucumber'
 import { chromium } from 'playwright'
 import LoginPage from '../pages/LoginPage.js'
 import InventoryPage from '../pages/InventoryPage.js'

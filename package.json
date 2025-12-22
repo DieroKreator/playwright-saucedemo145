@@ -9,7 +9,7 @@
     "test:headed": "playwright test --headed",
     "report": "playwright show report",
     "clean": "rimraf artifacts playwright-report test-results",
-    "test:bdd": "cucumber-js features/**/*.feature --require-module ts-node/register --require features/support/**/*.js"
+    "test:bdd": "cucumber-js"
   },
   "keywords": [],
   "author": "",
