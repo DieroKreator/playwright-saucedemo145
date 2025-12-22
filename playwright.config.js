@@ -1,4 +1,5 @@
-const { defineConfig, devices } = require('@playwright/test');
+import { defineConfig } from require('@playwright/test');
+const { devices } = require('@playwright/test');
 const path = require('path');
 const { compute_run_folder, ensure_subdirs } = require('./utils/path_tools');
 
@@ -12,8 +13,10 @@ process.env.RUN_DIR = runDir
 process.env.SCREENSHOTS_DIR = screenshotsDir
 
 module.exports = defineConfig({
-    testDir: '.tests',   // nossos testes estão na pasta tests
+    // testDir: '.tests',   // nossos testes estão na pasta tests
+    testDir: '.features',
     timeout: 30000,      // 30_000 = 30 segundos
+    retries: 1,
     fullyParallel: true, // execução em paralelo / multi thread
     outputDir: resultsDir,
     testDir: './tests',
