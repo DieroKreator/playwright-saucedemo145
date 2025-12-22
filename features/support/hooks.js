@@ -1,15 +1,15 @@
-import { Before, After } from '@cucumber/cucumber'
+import { BeforeAll, AfterAll } from '@cucumber/cucumber'
 import { chromium } from 'playwright'
 
 let browser, context, page
 
-Before(async () => {
+BeforeAll(async () => {
     browser = await chromium.launch()
     context = await browser.newContext()
     page = await context.newPage()
     global.page = page
 })
 
-After(async () => {
+AfterAll(async () => {
     await browser.close()
 })

@@ -25,5 +25,6 @@ When('clicks on the login button', async () => {
 
 Then('the user is redirected to the {string} page and title is {string}', async (url, title) => {
     await inventoryPage.verify_page_title(url, title)
+    await page.waitForTimeout(2000)
     await page.close()
 })
