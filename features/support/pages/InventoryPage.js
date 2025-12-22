@@ -4,7 +4,7 @@ export default class InventoryPage {
         this.title = '.title'
     }
 
-    async login(username, password) {
+    async verifyInventoryPage() {
         await this.page.waitForSelector(this.title)
         const sectionTitle = await this.page.textContent(this.title)
         if (!sectionTitle.includes('Products')) {
