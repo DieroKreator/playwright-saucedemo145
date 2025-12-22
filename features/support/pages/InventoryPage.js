@@ -4,10 +4,15 @@ export default class InventoryPage {
         this.title = '.title'
     }
 
-    async verifyInventoryPage() {
+    async verify_page_title(url, sectionTitle) {
+        const url_esperada = `/${url}\.html/`
+        await this.page.waitForURL(url_esperada)
+        const url_atual = this.page.url()
+
         await this.page.waitForSelector(this.title)
-        const sectionTitle = await this.page.textContent(this.title)
-        if (!sectionTitle.includes('Products')) {
+        sectionTitle = await this.page.textContent(this.title)
+
+        if (!sectionTitle.includes('Products') || !url_atual.inccludes(url_esperada)) {
             throw new Error('Login failed: navigation to Inventory page unsuccessful.')
         }
     }
