@@ -22,7 +22,7 @@ export const config = {
     // of the config file unless it's absolute.
     //
     specs: [
-        './../Playwright-saucedemo145/tests/**/*.js'
+        './../Playwright-saucedemo145/tests/mobile-app/android/**/*.spec.js'
     ],
     // Patterns to exclude.
     exclude: [
@@ -53,9 +53,9 @@ export const config = {
     capabilities: [{
         // capabilities for local Appium web tests on an Android Emulator
         platformName: 'Android',
-        browserName: 'Chrome',
+        browserName: '',
         'appium:deviceName': 'Android GoogleAPI Emulator',
-        'appium:platformVersion': '12.0',
+        'appium:platformVersion': '13.0',
         'appium:automationName': 'UiAutomator2'
     }],
 
@@ -115,7 +115,7 @@ export const config = {
     // Make sure you have the wdio adapter package for the specific framework installed
     // before running any tests.
     framework: 'mocha',
-    
+
     //
     // The number of times to retry the entire specfile when it fails as a whole
     // specFileRetries: 1,
