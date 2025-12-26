@@ -42,24 +42,16 @@ async function main() {
     await el9.click();
     //Cart screen
     const el10 = await driver.$("id:com.saucelabs.mydemoapp.android:id/cartIV");
-    await el10.click();
     const el11 = await driver.$("id:com.saucelabs.mydemoapp.android:id/productTV");
-    await el11.click();
     const el12 = await driver.$("id:com.saucelabs.mydemoapp.android:id/titleTV");
-    await el12.click();
     const el13 = await driver.$("id:com.saucelabs.mydemoapp.android:id/priceTV");
-    await el13.click();
     const el14 = await driver.$("accessibility id:Displays color of selected product");
-    await el14.click();
     const el15 = await driver.$("id:com.saucelabs.mydemoapp.android:id/cartTV");
-    await el15.click();
     const el16 = await driver.$("id:com.saucelabs.mydemoapp.android:id/totalPriceTV");
-    await el16.click();
     const el17 = await driver.$("accessibility id:Confirms products for checkout");
     await el17.click();
     //Checkout - Login screen
     const el18 = await driver.$("id:com.saucelabs.mydemoapp.android:id/loginTV");
-    await el18.click();
     const el19 = await driver.$("id:com.saucelabs.mydemoapp.android:id/nameET");
     await el19.addValue("bod@example.com");
     const el20 = await driver.$("id:com.saucelabs.mydemoapp.android:id/passwordET");
@@ -68,7 +60,6 @@ async function main() {
     await el21.click();
     //Checkout - Shipping screen
     const el22 = await driver.$("id:com.saucelabs.mydemoapp.android:id/checkoutTitleTV");
-    await el22.click();
     const el23 = await driver.$("id:com.saucelabs.mydemoapp.android:id/fullNameET");
     await el23.addValue("Winona Winter");
     const el24 = await driver.$("id:com.saucelabs.mydemoapp.android:id/address1ET");
@@ -100,24 +91,16 @@ async function main() {
     await el36.click();
     //Checkout - Review screen
     const el37 = await driver.$("id:com.saucelabs.mydemoapp.android:id/enterShippingAddressTV");
-    await el37.click();
     const el38 = await driver.$("id:com.saucelabs.mydemoapp.android:id/titleTV");
-    await el38.click();
     const el39 = await driver.$("id:com.saucelabs.mydemoapp.android:id/priceTV");
-    await el39.click();
     const el40 = await driver.$("accessibility id:Displays color of selected product");
-    await el40.click();
     const el41 = await driver.$("id:com.saucelabs.mydemoapp.android:id/fullNameTV");
-    await el41.click();
     const el42 = await driver.$("id:com.saucelabs.mydemoapp.android:id/totalAmountTV");
-    await el42.click();
     const el43 = await driver.$("accessibility id:Completes the process of checkout");
     await el43.click();
     //Order Complete screen
     const el44 = await driver.$("id:com.saucelabs.mydemoapp.android:id/completeTV");
-    await el44.click();
     const el45 = await driver.$("id:com.saucelabs.mydemoapp.android:id/thankYouTV");
-    await el45.click();
     const el46 = await driver.$("accessibility id:Tap to open catalog");
     await el46.click();
     const el47 = await driver.$("id:com.saucelabs.mydemoapp.android:id/productTV");
