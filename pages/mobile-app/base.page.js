@@ -1,10 +1,10 @@
-class BasePage {
+export default class BasePage {
     async scrollUp(scroll) {
         const START_Y = 1850;
         const END_Y = 100;
         const X_COORD = 500;
 
-        for (let i = 0; i < rolagem; i++) {
+        for (let i = 0; i < scroll; i++) {
 
             // Usamos a API 'performActions' (W3C) de forma simplificada
             await driver.performActions([
@@ -25,5 +25,3 @@ class BasePage {
         }
     }
 }
-
-export default new BasePage()
