@@ -5,10 +5,12 @@ This project contains end-to-end (E2E) tests for the SauceDemo application using
 ## Prerequisites
 
 ### For Web Testing (Playwright)
+
 - Node.js (version 14 or higher)
 - npm
 
 ### For Mobile App Testing (WebdriverIO/Appium)
+
 - Node.js (version 14 or higher)
 - npm
 - Appium Server
@@ -64,12 +66,14 @@ This will run the mobile app tests defined in the Cucumber features under `featu
 ## Configuration
 
 ### Web Testing Configuration
+
 - **Base URL**: https://www.saucedemo.com
 - **Browser**: Chromium (headless by default)
 - **Artifacts**: Screenshots, videos, and traces are captured on test failures
 - **Config File**: `playwright.config.js`
 
 ### Mobile Testing Configuration
+
 - **Runner**: Local Appium server (port 4723)
 - **Capabilities**: Configured in `config/` directory
   - `android.local.conf.js` - Local Android device/emulator
@@ -109,6 +113,7 @@ npm run clean
 ## Environment Setup
 
 ### Local Mobile Testing
+
 1. Start Appium server:
    ```bash
    appium --address 127.0.0.1 --port 4723
@@ -117,6 +122,7 @@ npm run clean
 3. Run tests with local configuration
 
 ### Sauce Labs Testing
+
 - Configure Sauce Labs credentials in environment variables
 - Use appropriate config files from `config/` directory
 - Tests will run on Sauce Labs cloud devices/emulators
