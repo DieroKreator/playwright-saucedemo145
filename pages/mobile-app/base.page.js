@@ -1,4 +1,4 @@
-module.exports = class BasePage {
+export default class BasePage {
     async scrollUp(scroll) {
         const START_Y = 1850;
         const END_Y = 100;
