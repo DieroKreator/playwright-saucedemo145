@@ -1,3 +1,5 @@
+import { localConfig } from './config/android.local.config'
+
 export const config = {
     //
     // ====================
