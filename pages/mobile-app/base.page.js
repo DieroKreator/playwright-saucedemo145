@@ -1,4 +1,4 @@
-export default class BasePage {
+class BasePage {
     async scrollUp(scroll) {
         const START_Y = 1850;
         const END_Y = 100;
@@ -25,3 +25,5 @@ export default class BasePage {
         }
     }
 }
+
+export default new BasePage()

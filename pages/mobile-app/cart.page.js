@@ -1,6 +1,6 @@
 import BasePage from "./base.page"
 
-module.exports = class CartPage extends BasePage {
+class CartPage extends BasePage {
 
     get product_title() {
         return $('id=com.saucelabs.mydemoapp.android:id/titleTV')
@@ -10,3 +10,5 @@ module.exports = class CartPage extends BasePage {
         return $('id=com.saucelabs.mydemoapp.android:id/priceTV')
     }
 }
+
+export default new CartPage()

@@ -1,6 +1,6 @@
 import BasePage from "./base.page"
 
-module.exports = class ProductsPage extends BasePage {
+class ProductsPage extends BasePage {
     get logo() { // seletor do logo MyDemoApp
         return $('~App logo and name')
     }
@@ -13,3 +13,5 @@ module.exports = class ProductsPage extends BasePage {
         await $(`android=new UiSelector().resourceId("com.saucelabs.mydemoapp.android:id/productIV").instance(${index})`).click()
     }
 }
+
+export default new ProductsPage()

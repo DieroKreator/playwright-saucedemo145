@@ -1,6 +1,6 @@
 import BasePage from "./base.page"
 
-module.exports = class ProductDetailsPage extends BasePage {
+class ProductDetailsPage extends BasePage {
     get product_title() {
         return $('id=com.saucelabs.mydemoapp.android:id/productTV')
     }
@@ -17,3 +17,5 @@ module.exports = class ProductDetailsPage extends BasePage {
         return $('//android.widget.TextView[@resource-id="com.saucelabs.mydemoapp.android:id/cartTV"]')
     }
 }
+
+export default new ProductDetailsPage()
