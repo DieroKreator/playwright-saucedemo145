@@ -1,6 +1,6 @@
 import BasePage from "./base.page"
 
-module.exports = class ProductPage extends BasePage {
+module.exports = class ProductsPage extends BasePage {
     get logo() { // seletor do logo MyDemoApp
         return $('~App logo and name')
     }
