@@ -1,4 +1,4 @@
-import { localConfig } from './config/android.local.conf'
+import localConfig from './config/android.local.conf.js';
 
 export const config = {
     //
