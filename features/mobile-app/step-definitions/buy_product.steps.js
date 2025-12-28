@@ -1,15 +1,22 @@
-import { Given, When, Then } from "@wdio/cucumber-framework"
-import ProductsPage from "../../mobile-app/product.page"
-import ProductDetailsPage from "../../mobile-app/product_details.page"
-import CartPage from "../../pages/cart.page"
+import { Given, When, Then, After } from "@wdio/cucumber-framework"
+import ProductsPage from "../../../pages/mobile-app/products.page.js"
+import ProductDetailsPage from "../../../pages/mobile-app/product_details.page.js"
+import CartPage from "../../../pages/mobile-app/cart.page.js"
+
+After(async () => {
+    // Finaliza o teste que estava em andamento
+    await driver.terminateApp('com.saucelabs.mydemoapp.android');
+    // Deixa pronto para rodar o próximo
+    await driver.activateApp('com.saucelabs.mydemoapp.android');
+})
 
 Given("I am on the Products screen", async () => {
     await driver.pause(1000)
 })
 
 When("on {string} I select the product at position {string}", async (scroll, index) => {
-    await ProductDetailsPage.scrollUp(scroll)
-    await ProductDetailsPage.add_to_cart_btn.click()
+    await ProductsPage.scrollUp(scroll)
+    await ProductsPage.click_on_product(index)
 })
 
 Then("I verify the {string} and the {string}", async (product, price) => {

@@ -1,4 +1,4 @@
-module.exports = {
+export default {
     "platformName": "Android",
     "appium:platformVersion": "13.0",
     "appium:deviceName": "emulator5554",
