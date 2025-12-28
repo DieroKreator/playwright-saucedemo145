@@ -4,7 +4,7 @@ Given("I am on the Products screen", async () => {
 
 })
 
-When("on {string} I select the product at position {int}", async () => {
+When("on {string} I select the product at position {string}", async () => {
 
 })
 
@@ -24,6 +24,6 @@ When("I click on the cart", async () => {
 
 })
 
-Then("I verify the {string}} and the {string} in the cart", async () => {
+Then("I verify the {string} and the {string} in the cart", async () => {
 
 })
