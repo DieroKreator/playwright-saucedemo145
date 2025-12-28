@@ -1,19 +1,19 @@
 import BasePage from "./base.page"
 
-module.exports = class ProductDetailPage extends BasePage {
-    get titulo_produto() {
+module.exports = class ProductDetailsPage extends BasePage {
+    get product_title() {
         return $('id=com.saucelabs.mydemoapp.android:id/productTV')
     }
 
-    get preco_produto() {
+    get product_price() {
         return $('id=com.saucelabs.mydemoapp.android:id/priceTV')
     }
 
-    get botao_adicionar_no_carrinho() {
+    get add_to_cart_btn() {
         return $('~Tap to add product to cart')
     }
 
-    get icone_carrinho() {
+    get cart_icon() {
         return $('//android.widget.TextView[@resource-id="com.saucelabs.mydemoapp.android:id/cartTV"]')
     }
 }
